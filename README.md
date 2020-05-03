@@ -1,2 +1,2 @@
 # paper
-Interesting Papers
+Interesting Papers, Articles, and Github repositories.
