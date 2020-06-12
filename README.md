@@ -1,5 +1,5 @@
 # paper
-Interesting Papers, Articles, and Github repositories.
+Interesting Papers, Articles, Books, and Github repositories.
 
 ## Issues
 - I write a small summary of papers in Issues.
