@@ -2,3 +2,5 @@
 .ipynb_checkpoints
 __pycache__
 dev.py
+k8s
+deploy.sh

@@ -5,8 +5,11 @@ from pathlib import Path
 root_path = str(Path(__file__).parents[1])
 sys.path.append(root_path)
 
+from Web_Optimization.header import header
 from Web_Optimization.click_rate_bayes import click_rate_bayes
 
+st.set_page_config(page_title="Web Optimzation")
+header()
 mode = st.selectbox("mode", ["Bayes Inference"])
 
 if mode == "Bayes Inference":
