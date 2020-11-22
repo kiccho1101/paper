@@ -14,6 +14,8 @@ pandas = "*"
 matplotlib = "*"
 streamlit = "*"
 seaborn = "*"
+arviz = "*"
+pymc3 = "*"
 
 [requires]
 python_version = "3.8"
