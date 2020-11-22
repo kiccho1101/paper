@@ -12,6 +12,8 @@ jupyter = "*"
 numpy = "*"
 pandas = "*"
 matplotlib = "*"
+streamlit = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.8"
