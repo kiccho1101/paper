@@ -12,12 +12,22 @@ from typing import List
 def ab_testing():
     N_str: str = st.text_input("N", value="434, 382, 394, 88").replace(" ", "")
     a_str: str = st.text_input("a", value="8, 17, 10, 4").replace(" ", "")
+    N: List[int] = [int(s) for s in N_str.split(",")]
+    a: List[int] = [int(s) for s in a_str.split(",")]
+    if not len(N) == len(a):
+        st.error("Lists must have the same lengths")
+    st.table(
+        pd.DataFrame(
+            {
+                "trial": [chr(65 + i) for i in range(len(N))],
+                "N": N,
+                "a": a,
+                "a/N(%)": np.array(a) / np.array(N) * 100,
+            }
+        ).set_index("trial")
+    )
     button = st.button("Run MCMC")
     if button:
-        N: List[int] = [int(s) for s in N_str.split(",")]
-        a: List[int] = [int(s) for s in a_str.split(",")]
-        print(N)
-        print(a)
         with pm.Model() as model:
             with st.spinner("Running MCMC..."):
                 theta = pm.Uniform("theta", lower=0, upper=1, shape=len(N))

@@ -8,14 +8,19 @@ sys.path.append(root_path)
 from Web_Optimization.header import header
 from Web_Optimization.click_rate_bayes import click_rate_bayes
 from Web_Optimization.ab_testing import ab_testing
+from Web_Optimization.ab_testing_comb import ab_testing_comb
 
 
 st.set_page_config(page_title="Web Optimzation")
 st.set_option("deprecation.showPyplotGlobalUse", False)
 header()
-mode = st.selectbox("mode", ["Bayes Inference", "A/B Testing"])
+mode = st.selectbox(
+    "mode", ["Bayes Inference", "A/B Testing", "Combinational A/B Testing"]
+)
 
 if mode == "Bayes Inference":
     click_rate_bayes()
 if mode == "A/B Testing":
     ab_testing()
+if mode == "Combinational A/B Testing":
+    ab_testing_comb()
