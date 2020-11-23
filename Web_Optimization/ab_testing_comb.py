@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 import pymc3 as pm
-from itertools import combinations
 
 from typing import List
 
@@ -45,6 +44,9 @@ def ab_testing_comb():
                 trace = pm.sample(5000, chains=2, tune=1000, cores=1)
             pm.traceplot(trace)
             st.pyplot()
+
+            waic = pm.waic(trace, model)
+            st.subheader("WAIC: {}".format(waic.p_waic))
 
             summary = pm.summary(trace, hdi_prob=0.95)
             st.table(summary)

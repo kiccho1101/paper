@@ -40,6 +40,9 @@ def ab_testing():
             plt.legend()
             st.pyplot()
 
+            waic = pm.waic(trace, model)
+            st.subheader("WAIC: {}".format(waic.p_waic))
+
             summary = pm.summary(trace, hdi_prob=0.95)
             st.table(summary)
 
