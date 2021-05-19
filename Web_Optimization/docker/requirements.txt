@@ -90,7 +90,7 @@ tornado==6.1; python_version >= '3.5'
 traitlets==5.0.5; python_version >= '3.7'
 typing-extensions==3.7.4.3
 tzlocal==2.1
-urllib3==1.26.2; python_version != '3.4'
+urllib3==1.26.4; python_version != '3.4'
 validators==0.18.1; python_version >= '3.4'
 watchdog==0.10.4
 wcwidth==0.2.5
