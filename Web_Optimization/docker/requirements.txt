@@ -44,7 +44,7 @@ markupsafe==1.1.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 
 matplotlib==3.3.3
 mistune==2.0.3
 nbclient==0.5.1; python_version >= '3.6'
-nbconvert==6.3.0; python_version >= '3.6'
+nbconvert==6.5.1; python_version >= '3.6'
 nbformat==5.0.8; python_version >= '3.5'
 nest-asyncio==1.4.3; python_version >= '3.5'
 netcdf4==1.5.4
